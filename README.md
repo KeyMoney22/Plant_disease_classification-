@@ -1,5 +1,7 @@
 # Plant_disease_classification
 ![image](https://github.com/user-attachments/assets/ae644a5b-6bad-4b08-a941-861cb9681bc6)
+
+**Authors:** Diana Olulo, LIsa Mwikali, Kimani Irungu, Purity Kibaki, Andrew Baraka, Victor Keya
 ## Introduction
 Tomatoes are one of the most important crops in Kenya, both economically and nutritionally. They are a staple in the diet of many Kenyans and a significant source of income for smallholder farmers. However, tomato production in Kenya faces numerous challenges, among which diseases are the most important. Tomato plants are susceptible to various diseases caused by fungi, bacteria, viruses, and pests. These diseases can lead to substantial yield losses, reduced produce quality, and increased production costs due to the need for pesticides and other control measures.
 
@@ -98,6 +100,24 @@ The model is learning well on the training data, as seen by the increasing train
 
 The validation accuracy and loss suggest that the model generally performs well on unseen data but has some fluctuations indicating periods of slight overfitting.
 
-**CNN Model Evaluation on Test (Unseen) Data**
+**VGG19 Model Evaluation on Test (Unseen) Data**
 
 The VGG19 model achieved a test accuracy of approximately 88.5%.It performs well and has strong generalization abilities.
+
+### Resnet50 Model
+
+![image](https://github.com/user-attachments/assets/0c4dd402-76ec-4406-9828-9f816766bb09)
+
+![image](https://github.com/user-attachments/assets/110d1c1f-4a04-4681-887e-d07eb99b037a)
+
+The model's training accuracy steadily increases from the start, reaching a plateau around epoch 10.
+
+The validation accuracy also shows an upward trend.
+
+**Resnet50 Model Evaluation on Test (Unseen) Data**
+
+With a test accuracy of 94.2%, ResNet50 performs very well showing very good generalization on the test set .
+
+### Model Selection
+
+ResNet50 is the best model due to its higher accuracy, consistent learning behavior, and better generalization capabilities compared to VGG19 and CNN model.
