@@ -13,6 +13,7 @@ Agriculture is a cornerstone of Kenya's economy, with a majority of the populati
 
 Develop an automated plant disease detection system leveraging image recognition technology. This solution aims to provide an accessible, cost-effective, and rapid method for farmers to diagnose plant diseases by analyzing images of crop leaves. By offering timely and accurate disease identification, this system can empower farmers to implement effective treatment strategies, minimize crop losses, and enhance agricultural productivity.
 
+
 ## Data Understanding
 
 ### Data Source
@@ -26,22 +27,77 @@ The link to the repository is here: https://www.kaggle.com/datasets/emmarex/plan
 
 Dataset Author Website: https://plantvillage.psu.edu/
 
-### Objectives
-1. Dataset Development: Collect and preprocess a diverse dataset of plant leaf images from Kenyan farms, labeled with various disease types.
-2. Model Development: Build and train a Deep Learning model to classify images of plant leaves into healthy or diseased categories.
-3. Model Evaluation: Evaluate the model’s performance using accuracy, precision, recall, and F1-score metrics.
-4. Deployment: Develop a user-friendly mobile application that allows Kenyan farmers to upload images and receive disease diagnosis and treatment recommendations.
-5. Impact Assessment: Evaluate the system’s impact on crop yield and farmer decision-making through pilot studies and feedback from Kenyan farmers.
+
+### Other Objectives
+i. Data Collection and Preprocessing.Gather and preprocess a diverse dataset of tomato leaf images.
+
+ii. Model Development.Build and train deep learning models for disease classification.
+
+iii. Model Evaluation.Assess the models performance using metrics such as accuracy
+
+iv. Deployment
+
+
 
 ### Metrics of success
 1. Model Accuracy: Achieve a classification accuracy of over 90%.
-2. Precision and Recall: Achieve precision and recall scores of over 85% for each disease category.
 
 
 ## Methodology
+The project will follow the following steps:
+
+a. **Exploratory Data Analysis:** We preview data and check the specifc class distributions and  clean the data 
+
+b. **Data Preprocessing:** This step involves handling class imbalance , and resizing images 
+
+c. **Model Selection and Training:** Trin various Tensorflow models, such as CNN, Resnet50, VGG19, Effiecientnet and MobilenetV2 to select the most suitable model tomato disease detection.
+
+d. **Model Evaluation:** We will assess the performance of the trained models using  the accuracy metric and plot the tanining and validation performance of various models.
+
+e. **Model Tuning:** We will fine-tune the top 2 models by adjusting hyperparameters and employing techniques wandb
+
+f. **Model Deployment**
 
 ## EDA
 ![image](https://github.com/user-attachments/assets/dce0178c-4477-4b9e-af38-f1ca3ad036de)
 
+**Observations**
+
+The image displays nine image samples with corresponding class labels. The labels are  cleaned and formatted correctly based
+
 ![image](https://github.com/user-attachments/assets/d2989640-7b3b-46a5-a3a4-1b9e7757a942)
 
+**Observations**
+
+The horizontal bar chart shows the distribution of images across different classes in the dataset. Each bar represents a class, and its length corresponds to the frequency or count of images belonging to that class.tomato_yellow_leaf_curl_virus is the largest class containing 3208 images and tomato_mosaic_virus is the smallest class containing 373 images
+
+## Modelling
+### CNN Base Model 
+
+![image](https://github.com/user-attachments/assets/ea2432c2-cf2a-4249-868a-95b836ab755e)
+
+![image](https://github.com/user-attachments/assets/89eb0bab-1558-4ba7-8f39-b11f0c1435bb)
+
+The model shows consistent improvement in both accuracy and loss on the training data, indicating effective learning.
+
+The validation accuracy and loss trends suggest good generalization, and the fluctuations indicate variability in the validation data.
+
+The difference between training and validation performance is relatively small, suggesting that the model generalizes well to unseen data, but there might be room for improvement to reduce overfitting.
+
+**CNN Model Evaluation on Test (Unseen) Data**
+
+Achieved a test accuracy of 91.4% indicates that the model, after several epochs of training and validation, performs  well on new, unseen data. This result shows that the model not only improved its performance on training and validation sets but also generalized well to the test set.
+
+### VGG19 Model
+
+![image](https://github.com/user-attachments/assets/8f8e9cce-3044-43eb-846f-4c0619cbeaa2)
+
+![image](https://github.com/user-attachments/assets/18099fb4-948a-4a6b-9437-39d44706bc02)
+
+The model is learning well on the training data, as seen by the increasing training accuracy and decreasing training loss.
+
+The validation accuracy and loss suggest that the model generally performs well on unseen data but has some fluctuations indicating periods of slight overfitting.
+
+**CNN Model Evaluation on Test (Unseen) Data**
+
+The VGG19 model achieved a test accuracy of approximately 88.5%.It performs well and has strong generalization abilities.
