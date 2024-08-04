@@ -1,7 +1,7 @@
-# Plant_disease_classification
+# TOMATO DISEASE DETECTION
 ![image](https://github.com/user-attachments/assets/ae644a5b-6bad-4b08-a941-861cb9681bc6)
 
-**Authors:** Diana Olulo, LIsa Mwikali, Kimani Irungu, Purity Kibaki, Andrew Baraka, Victor Keya
+**Authors:** Diana Olulo, Lisa Mwikali, Kimani Irungu, Purity Kibaki, Andrew Baraka, Victor Keya
 ## Introduction
 Tomatoes are one of the most important crops in Kenya, both economically and nutritionally. They are a staple in the diet of many Kenyans and a significant source of income for smallholder farmers. However, tomato production in Kenya faces numerous challenges, among which diseases are the most important. Tomato plants are susceptible to various diseases caused by fungi, bacteria, viruses, and pests. These diseases can lead to substantial yield losses, reduced produce quality, and increased production costs due to the need for pesticides and other control measures.
 
@@ -71,52 +71,50 @@ The image displays nine image samples with corresponding class labels. The label
 
 **Observations**
 
-The horizontal bar chart shows the distribution of images across different classes in the dataset. Each bar represents a class, and its length corresponds to the frequency or count of images belonging to that class.tomato_yellow_leaf_curl_virus is the largest class containing 3208 images and tomato_mosaic_virus is the smallest class containing 373 images
+The horizontal bar chart shows the distribution of images across different classes in the dataset. Each bar represents a class, and  count of images belonging to that class.tomato_yellow_leaf_curl_virus is the largest class containing 3208 images and tomato_mosaic_virus is the smallest class containing 373 images
 
 ## Modelling
-### CNN Base Model 
+**Quick preview of the base model and top 2 best perfoming models**
 
-![image](https://github.com/user-attachments/assets/ea2432c2-cf2a-4249-868a-95b836ab755e)
+### CNN Base Model
 
-![image](https://github.com/user-attachments/assets/89eb0bab-1558-4ba7-8f39-b11f0c1435bb)
+![image](https://github.com/user-attachments/assets/249705be-0056-4b2e-bca4-4edce75a4fa5)
 
-The model shows consistent improvement in both accuracy and loss on the training data, indicating effective learning.
+![image](https://github.com/user-attachments/assets/e34038cd-6e1b-45c7-8dc4-cd8b79bfc9d9)
 
-The validation accuracy and loss trends suggest good generalization, and the fluctuations indicate variability in the validation data.
+- Both training and validation accuracy increase rapidly during the early epochs, suggesting that the model is learning effectively from the training data.
+- Both training and validation loss decrease during the early epochs, indicating that the model is learning to make better predictions.
+- The training accuracy consistently sits above the validation accuracy, indicating that the model is overfitting to the training data.
 
-The difference between training and validation performance is relatively small, suggesting that the model generalizes well to unseen data, but there might be room for improvement to reduce overfitting.
+### ResNet50 Model
 
-**CNN Model Evaluation on Test (Unseen) Data**
+![image](https://github.com/user-attachments/assets/da087c23-040a-4e66-b377-ada3c862bd61)
 
-Achieved a test accuracy of 91.4% indicates that the model, after several epochs of training and validation, performs  well on new, unseen data. This result shows that the model not only improved its performance on training and validation sets but also generalized well to the test set.
+![image](https://github.com/user-attachments/assets/00a324a8-a20f-424d-8ff1-f412f979949b)
 
-### VGG19 Model
+- The training accuracy increases steadily from around 72.5% to around 88% over the 5 epochs indicating that the model is learning from the training data and improving its performance over time.
+- The validation accuracy starts high, increases, and then slightly fluctuates but generally trends around 90%.This suggests that the model initially performs well on unseen data and maintains good performance, with minor fluctuations possibly due to data variability.
+- The training loss decreases consistently from around 0.75 to around 0.25 over the epochs indicating that the model is learning to reduce errors on the training data.
+- The validation loss starts lower than the training loss and fluctuates but shows a general downward trend suggesting that the model performs well on the validation set
 
-![image](https://github.com/user-attachments/assets/8f8e9cce-3044-43eb-846f-4c0619cbeaa2)
+### Resnet Hypertuned Model
 
-![image](https://github.com/user-attachments/assets/18099fb4-948a-4a6b-9437-39d44706bc02)
+![image](https://github.com/user-attachments/assets/33f67b04-9514-4e4e-ad27-2af88f20621f)
 
-The model is learning well on the training data, as seen by the increasing training accuracy and decreasing training loss.
+![image](https://github.com/user-attachments/assets/3971476b-bd9f-46c2-aba4-abbd420d5aa3)
 
-The validation accuracy and loss suggest that the model generally performs well on unseen data but has some fluctuations indicating periods of slight overfitting.
+- The training accuracy starts low at around 80% and increases steadily over the epochs, reaching approximately 94.8% by the end.
+- The validation accuracy shows more fluctuations compared to the training accuracy.It starts high, dips slightly around the 3rd epoch, and then fluctuates but generally trends upwards.Despite these fluctuations, the validation accuracy also ends around 94.6%.
+- The training loss starts relatively high around 0.6 and rapidly decreases over the epochs.
+- The validation loss also starts high, around 0.4, and shows some fluctuations but generally trends downwards
+  
+## Model Evaluation
 
-**VGG19 Model Evaluation on Test (Unseen) Data**
+![WhatsApp Image 2024-08-04 at 21 10 15_0320180d](https://github.com/user-attachments/assets/6731ba62-e2fc-49c2-b0af-fec4ecf615bd)
 
-The VGG19 model achieved a test accuracy of approximately 88.5%.It performs well and has strong generalization abilities.
+![image](https://github.com/user-attachments/assets/d910a9da-cfc7-4e37-a87e-b49d68b54653)
 
-### Resnet50 Model
 
-![image](https://github.com/user-attachments/assets/0c4dd402-76ec-4406-9828-9f816766bb09)
-
-![image](https://github.com/user-attachments/assets/110d1c1f-4a04-4681-887e-d07eb99b037a)
-
-The model's training accuracy steadily increases from the start, reaching a plateau around epoch 10.
-
-The validation accuracy also shows an upward trend.
-
-**Resnet50 Model Evaluation on Test (Unseen) Data**
-
-With a test accuracy of 94.2%, ResNet50 performs very well showing very good generalization on the test set .
 
 ### Model Selection
 
