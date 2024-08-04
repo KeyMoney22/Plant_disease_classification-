@@ -117,3 +117,21 @@ The horizontal bar chart shows the distribution of images across different class
 ### Model Selection
 
 ResNet50 is the best model due to its higher accuracy, consistent learning behavior, and better generalization capabilities compared to VGG19 and CNN model.
+
+## CONCLUSION
+-Resnet50 Model conistently showed the best performance with it getting to a training accuracy of 98% and a validation accuracy of 94.6% after hyperparametertuning was done.
+- EfficientNet-B0 Model seemed to be performing well at certain points of the data and performing poorly at other points of the data with it achieving accuracies as low as 20% and very high losses indicating that it was not fitting well to the data.
+- The VGG19 model's accuracy remained low , indicating challenges in model performance and optimization.
+- CNN showed a moderate level of effectiveness but showed aspects of overfitting when tuning was done on it to try and improve its effectiveness.
+- MobileNet V2 had the least impressive performance with it consistently performimg poorly against the data
+
+## RECOMMENDATIONS
+- Ensemble Methods:combining the predictions of multiple models to improve the overall accuracy and reduce the likelihood of overfitting
+- Model Optimization:experiment with different learning rates, batch sizes, and epochs to enhance performance.
+- Data Augmentation:incorporate more data augmentation techniques to increase the diversity of the training dataset, which can help improve the model's robustness and generalization.
+
+## NEXT STEPS
+- Enhancing the model to not only detect the presence of tomato diseases but also classify the severity of the infection (e.g., mild, moderate, severe). This information can help farmers prioritize treatment for more severely affected plants.
+- Developing a mobile application that integrates the disease detection model. This app can allow farmers to take pictures of their tomato plants and receive instant feedback on disease presence, type, and severity, along with treatment recommendations.
+- Integrating the model with Internet of Things (IoT) devices for continuous monitoring of tomato crops. Sensors and cameras can capture data and images in real-time, allowing the model to provide ongoing assessments and alerts for early disease detection.
+- Creating training materials and resources to educate farmers on how to use the disease detection tools effectively. This can include tutorials on the mobile app, best practices for capturing images, and guidelines for interpreting the results.
