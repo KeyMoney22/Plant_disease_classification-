@@ -110,8 +110,6 @@ The horizontal bar chart shows the distribution of images across different class
   
 ## Model Evaluation
 
-![WhatsApp Image 2024-08-04 at 21 10 15_0320180d](https://github.com/user-attachments/assets/6731ba62-e2fc-49c2-b0af-fec4ecf615bd)
-
 ![image](https://github.com/user-attachments/assets/d910a9da-cfc7-4e37-a87e-b49d68b54653)
 
 
