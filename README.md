@@ -2,6 +2,20 @@
 ![image](https://github.com/user-attachments/assets/ae644a5b-6bad-4b08-a941-861cb9681bc6)
 
 **Authors:** Diana Olulo, Lisa Mwikali, Kimani Irungu, Purity Kibaki, Andrew Baraka, Victor Keya
+## Repository Navigation
+1. [Introduction](https://github.com/KeyMoney22/Plant_disease_classification-?tab=readme-ov-file#introduction)
+2. [Business Understanding](https://github.com/KeyMoney22/Plant_disease_classification-?tab=readme-ov-file#business-understanding)
+3. [Data Understanding](https://github.com/KeyMoney22/Plant_disease_classification-?tab=readme-ov-file#data-understanding)
+4. [Files and Directories](#files-and-directories)
+    - [Flask_App_Model_Deployment using ngrok](https://github.com/KeyMoney22/Plant_disease_classification-/blob/main/Flask_App_Model_Deployment%20using%20ngrok.ipynb)
+    - [MODEL HISTORY GUIDE](https://github.com/KeyMoney22/Plant_disease_classification-/blob/main/MODEL%20HISTORY%20GUIDE.txt)
+    - [README.md](https://github.com/KeyMoney22/Plant_disease_classification-/blob/main/README.md)
+    - [tomato_disease_detection.ipynb](https://github.com/KeyMoney22/Plant_disease_classification-/blob/main/tomato_disease_detection.ipynb)
+
+ 5. [Conclusion](https://github.com/KeyMoney22/Plant_disease_classification-?tab=readme-ov-file#conclusion)
+ 6. [Recommendations](https://github.com/KeyMoney22/Plant_disease_classification-?tab=readme-ov-file#recommendations)
+ 7. [Next Steps](https://github.com/KeyMoney22/Plant_disease_classification-?tab=readme-ov-file#next-steps)
+
 ## Introduction
 Tomatoes are one of the most important crops in Kenya, both economically and nutritionally. They are a staple in the diet of many Kenyans and a significant source of income for smallholder farmers. However, tomato production in Kenya faces numerous challenges, among which diseases are the most important. Tomato plants are susceptible to various diseases caused by fungi, bacteria, viruses, and pests. These diseases can lead to substantial yield losses, reduced produce quality, and increased production costs due to the need for pesticides and other control measures.
 
